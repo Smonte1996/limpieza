@@ -8,11 +8,11 @@ Servicio No Conforme Cliente
 @section('contenido')
 <div class="md:flex md:justify-center md:items-center">
     <div class="md:flex rounded-lg shadow-lg md:w-6/10 bg-green-400">
-      <div class="md:w-1/2 p-2">
+      <div class="md:w-1/2 p-5">
           <img src="{{asset('img/Login.png')}}" alt="IMG">
         </div>
         <div class="md:w-3/6 p-6 mt-12">
-        <form id="frmLogin" class="validate-form" method="POST" action="{{route('login')}}">
+        <form method="get" action="{{route('login')}}">
             @csrf 
           <div class="relative flex items-center text-black mb-6" data-validate="Validar Correo Requerido: ex@abc.xyz">
             <span class="w-5 h-7 absolute ml-3 pointer-events-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -20,7 +20,7 @@ Servicio No Conforme Cliente
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <polyline points="3 7 12 13 21 7" />
               </svg></span>
-            <input  class="border p-2 pr-3 pl-12 w-full rounded-3xl focus:outline-none focus:border-lime-400 focus:ring-lime-800 block focus:ring-4" autocomplete="on" type="email"  required name="email" :value="old('email')" placeholder="Correo Electrónico" />
+            <input  class="border p-2 pr-3 pl-12 w-full rounded-3xl focus:outline-none focus:border-lime-400 focus:ring-lime-800 block focus:ring-4" autocomplete="on" type="email" name="email" :value="old('email')" placeholder="Correo Electrónico" />
           </div>
 
           <div class="relative flex items-center text-black mb-6" data-validate="Contraseña es requerida">

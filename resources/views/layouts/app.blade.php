@@ -12,7 +12,7 @@
 
     </head>
     <body class="bg-green-700">
-      <header class="p-5 border-b bg-white shadow">
+      <header class="p-3 border-b bg-white shadow">
         <div class="container mx-auto flex justify-between items-center">
             <img src="{{ asset('img/ran.png')}}" alt="logo-ransa">
     </div>
